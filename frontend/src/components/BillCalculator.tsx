@@ -49,7 +49,7 @@ export default function BillCalculator() {
         ['TOTAL PAYABLE', `$${bill.totalAmount}`],
       ],
       theme: 'grid',
-      headStyles: { fillColor: [79, 70, 229] }, // Indigo color
+      headStyles: { fillColor: [79, 70, 229] },
     });
     
     doc.save(`bill-${Date.now()}.pdf`);
