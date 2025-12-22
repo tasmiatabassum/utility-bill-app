@@ -1,15 +1,4 @@
-Here is the raw content for your `README.md`.
 
-**Instructions:**
-
-1. Go to your GitHub repository.
-2. Click `README.md` -> Click the **Pencil Icon** (Edit).
-3. **Delete everything** currently in the file.
-4. **Copy and paste** the code block below.
-5. **Replace the links** at the top with your actual Vercel/Render URLs.
-6. Click **Commit changes**.
-
-```markdown
 # Utility Bill Calculator (Acme AI Fellowship)
 
 A full-stack web application that calculates utility bills based on a configurable flat-rate rule. The system includes a public-facing calculator for users and a secured admin panel for updating pricing configurations.
