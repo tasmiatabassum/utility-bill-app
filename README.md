@@ -1,3 +1,15 @@
+Here is the raw content for your `README.md`.
+
+**Instructions:**
+
+1. Go to your GitHub repository.
+2. Click `README.md` -> Click the **Pencil Icon** (Edit).
+3. **Delete everything** currently in the file.
+4. **Copy and paste** the code block below.
+5. **Replace the links** at the top with your actual Vercel/Render URLs.
+6. Click **Commit changes**.
+
+```markdown
 # Utility Bill Calculator (Acme AI Fellowship)
 
 A full-stack web application that calculates utility bills based on a configurable flat-rate rule. The system includes a public-facing calculator for users and a secured admin panel for updating pricing configurations.
@@ -37,6 +49,7 @@ A full-stack web application that calculates utility bills based on a configurab
 Prerequisites: Node.js (v18+) and a PostgreSQL connection string.
 
 ### 1. Backend Setup (NestJS)
+
 ```bash
 cd backend
 
@@ -53,7 +66,13 @@ npx prisma generate
 # Run the Server
 npm run start:dev
 # Backend runs at http://localhost:3000
-2. Frontend Setup (React + Vite)Bashcd frontend
+
+```
+
+### 2. Frontend Setup (React + Vite)
+
+```bash
+cd frontend
 
 # Install dependencies
 npm install
@@ -61,9 +80,73 @@ npm install
 # Run the Application
 npm run dev
 # Frontend runs at http://localhost:5173
-🔑 Environment VariablesBackend (backend/.env)VariableDescriptionDATABASE_URLPostgreSQL Connection String (from Neon/Supabase/Render)Frontend (frontend/.env)Note: This is optional for local dev as it defaults to localhost, but required for production.| Variable | Description || :--- | :--- || VITE_API_URL | The URL of the backend API (e.g., http://localhost:3000/billing) |📡 API ReferenceGET /billing/configFetches the currently active pricing rules.POST /billing/calculateCalculates the bill based on units provided.Body: { "units": 100 }Response: Breakdown of cost, VAT, and total.POST /billing/admin/updateUpdates the pricing configuration.Headers: admin-key: 12345Body:JSON{
+
+```
+
+---
+
+## 🔑 Environment Variables
+
+### Backend (`backend/.env`)
+
+| Variable | Description |
+| --- | --- |
+| `DATABASE_URL` | PostgreSQL Connection String (from Neon/Supabase/Render) |
+
+### Frontend (`frontend/.env`)
+
+*Note: This is optional for local dev as it defaults to localhost, but required for production.*
+
+| Variable | Description |
+| --- | --- |
+| `VITE_API_URL` | The URL of the backend API (e.g., `http://localhost:3000/billing`) |
+
+---
+
+## 📡 API Reference
+
+### `GET /billing/config`
+
+Fetches the currently active pricing rules.
+
+### `POST /billing/calculate`
+
+Calculates the bill based on units provided.
+
+* **Body:** `{ "units": 100 }`
+* **Response:** Breakdown of cost, VAT, and total.
+
+### `POST /billing/admin/update`
+
+Updates the pricing configuration.
+
+* **Headers:** `admin-key: 12345`
+* **Body:**
+```json
+{
   "ratePerUnit": 6.5,
   "vatPercentage": 15,
   "serviceCharge": 20
 }
-🤖 AI Tool Usage DeclarationIn compliance with the assignment guidelines, the following AI tools were used during development:Google Gemini: Used for generating boilerplate code for NestJS modules, debugging TypeScript errors, and refining the Tailwind CSS configuration for the UI.Logic Verification: All AI-generated logic (specifically the VAT calculation and PDF generation) was manually reviewed and tested to ensure accuracy.Submitted by: Tasmia TabassumDate: December 22, 2025
+
+```
+
+
+
+---
+
+## 🤖 AI Tool Usage Declaration
+
+In compliance with the assignment guidelines, the following AI tools were used during development:
+
+* **Google Gemini:** Used for generating boilerplate code for NestJS modules, debugging TypeScript errors, and refining the Tailwind CSS configuration for the UI.
+* **Logic Verification:** All AI-generated logic (specifically the VAT calculation and PDF generation) was manually reviewed and tested to ensure accuracy.
+
+---
+
+**Submitted by:** Tasmia Tabassum
+**Date:** December 22, 2025
+
+```
+
+```
