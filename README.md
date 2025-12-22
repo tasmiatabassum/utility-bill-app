@@ -1,5 +1,5 @@
 
-# Utility Bill Calculator (Acme AI Fellowship)
+# Utility Bill Calculator 
 
 A full-stack web application that calculates utility bills based on a configurable flat-rate rule. The system includes a public-facing calculator for users and a secured admin panel for updating pricing configurations.
 
