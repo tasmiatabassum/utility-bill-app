@@ -3,7 +3,8 @@ import axios from 'axios';
 import jsPDF from 'jspdf';
 import autoTable from 'jspdf-autotable';
 
-const API_URL = 'http://localhost:3000/billing';
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000/billing';
+
 
 export default function BillCalculator() {
   const [units, setUnits] = useState<number | ''>('');
